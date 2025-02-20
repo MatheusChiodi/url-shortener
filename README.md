@@ -135,5 +135,5 @@ Feel free to open issues and pull requests for improvements!
 
 ---
 
-## ⭐ **Gostou do projeto?**
-Dê uma ⭐ no repositório e compartilhe com amigos! 🚀
+## ⭐ **Did you like the project?**
+Give the repository a ⭐ and share it with your friends! 🚀
