@@ -80,7 +80,6 @@ npm run dev
 │
 ├── 📁 frontend         # Interface React
 │   ├── 📁 src          # Código-fonte
-│   ├── 📁 components   # Componentes React
 │   ├── App.js          # Componente principal
 │   ├── package.json    # Dependências do React
 │
