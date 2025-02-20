@@ -1,135 +1,135 @@
-# 🔗 URL Shortener - Encurtador de URLs 🚀
+# 🔗 URL Shortener - URL Shortener 🚀
 
-Este projeto é um **encurtador de URL** completo, dividido em **duas partes**:
+This project is a complete **URL Shortener**, divided into **two parts**:
 
-1. **Backend (Node.js + Express)** → Responsável por encurtar URLs e gerar QR Codes.
-2. **Frontend (React + Tailwind CSS + Framer Motion)** → Interface interativa para encurtar e visualizar URLs encurtadas.
+1. **Backend (Node.js + Express)** → Responsible for shortening URLs and generating QR Codes.
 
-## 📌 **Sobre o Projeto**
-Este projeto permite que os usuários encurtem URLs longas e gerem **QR Codes** para fácil compartilhamento. Ele inclui funcionalidades como:
-- **Geração de links curtos automaticamente** 🏷️
-- **Redirecionamento de links curtos** 🔄
-- **Geração automática de QR Codes** 📲
-- **Botão para copiar a URL encurtada e a imagem do QR Code** 📋
-- **Interface moderna e responsiva com animações** 🎨
+2. **Frontend (React + Tailwind CSS + Framer Motion)** → Interactive interface to shorten and view shortened URLs.
+
+## 📌 **About the Project**
+This project allows users to shorten long URLs and generate **QR Codes** for easy sharing. It includes features such as:
+- **Automatic generation of short links** 🏷️
+- **Short link redirection** 🔄
+- **Automatic generation of QR Codes** 📲
+- **Button to copy the shortened URL and the QR Code image** 📋
+- **Modern and responsive interface with animations** 🎨
 
 ---
 
-## 🚀 **Tecnologias Utilizadas**
+## 🚀 **Technologies Used**
 ### **Backend:**
-- **Node.js** - Plataforma JavaScript para execução no servidor.
-- **Express.js** - Framework para criação de APIs.
-- **CORS** - Controle de acessos entre o frontend e o backend.
-- **QR Code API** - Geração automática de QR Codes.
+- **Node.js** - JavaScript platform for server-side execution.
+- **Express.js** - Framework for creating APIs.
+- **CORS** - Access control between the frontend and backend.
+- **QR Code API** - Automatic generation of QR Codes.
 
 ### **Frontend:**
-- **React.js** - Biblioteca JavaScript para criar interfaces de usuário.
-- **Tailwind CSS** - Framework CSS para estilização rápida e responsiva.
-- **Framer Motion** - Biblioteca para animações fluidas.
+- **React.js** - JavaScript library for creating user interfaces.
+- **Tailwind CSS** - CSS framework for fast and responsive styling.
+- **Framer Motion** - Library for fluid animations.
 
 ---
 
-## 🛠️ **Como Configurar o Projeto**
-### **1️⃣ Clonar o Repositório**
+## 🛠️ **How ​​to Set Up the Project**
+### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/seu-usuario/url-shortener.git
+git clone https://github.com/user/url-shortener.git
 cd url-shortener
 ```
 
-### **2️⃣ Configurar o Backend**
+### **2️⃣ Configure the Backend**
 ```bash
 cd backend
 npm install
 node index.js
 ```
-> O servidor será iniciado em `http://localhost:3000`
+> The server will be started at `http://localhost:3000`
 
-### **3️⃣ Configurar o Frontend**
+### **3️⃣ Configure the Frontend**
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-> O frontend será iniciado em `http://localhost:5173`
+> The frontend will be started at `http://localhost:5173`
 
 ---
 
-## 🎯 **Como Usar**
-### **1️⃣ Encurtar uma URL**
-- Digite a URL longa no campo de entrada e clique no botão **"Shorten"**.
-- O link encurtado aparecerá abaixo, pronto para ser copiado e compartilhado.
+## 🎯 **How ​​to Use**
+### **1️⃣ Shorten a URL**
+- Enter the long URL in the input field and click the **"Shorten"** button.
+- The shortened link will appear below, ready to be copied and shared.
 
-### **2️⃣ Acessar a URL Encurtada**
-- Clique na URL gerada para abrir o site original.
+### **2️⃣ Access the Shortened URL**
+- Click on the generated URL to open the original website.
 
-### **3️⃣ Gerar QR Code**
-- Um QR Code é gerado automaticamente para cada URL encurtada.
-- Clique no botão **"Copy QR Code"** para copiá-lo e colá-lo onde quiser.
+### **3️⃣ Generate QR Code**
+- A QR Code is automatically generated for each shortened URL.
+- Click the **"Copy QR Code"** button to copy and paste it wherever you want.
 
 ---
 
-## 📂 **Estrutura do Projeto**
+## 📂 **Project Structure**
 ```
 📦 url-shortener
-├── 📁 backend          # API em Node.js
-│   ├── 📁 controllers  # Lógica do encurtamento e QR Code
-│   ├── 📁 routes       # Rotas da API
-│   ├── 📁 utils        # Funções auxiliares
-│   ├── index.js        # Arquivo principal do backend
-│   ├── package.json    # Dependências do Node.js
+├── 📁 backend # API in Node.js
+│ ├── 📁 controllers # Shortening logic and QR Code
+│ ├── 📁 routes # API routes
+│ ├── 📁 utils # Helper functions
+│ ├── index.js # Main backend file
+│ ├── package.json # Node.js dependencies
 │
-├── 📁 frontend         # Interface React
-│   ├── 📁 src          # Código-fonte
-│   ├── App.js          # Componente principal
-│   ├── package.json    # Dependências do React
+├── 📁 frontend # React interface
+│ ├── 📁 src # Source Code
+│ ├── App.js # Main Component
+│ ├── package.json # React Dependencies
 │
-└── README.md           # Este arquivo
+└── README.md # This File
+```
+---
+
+## 📖 **API Routes**
+### **1️⃣ Shorten a URL**
+- **Method:** `POST`
+- **Endpoint:** `/shortUrl`
+- **Body:**
+```json
+{
+"url": "https://www.google.com"
+}
+```
+- **Response:**
+```json
+{
+"short_url": "http://localhost:3000/abc123"
+}
+```
+
+### **2️⃣ Redirect to the original URL**
+- **Method:** `GET`
+- **Endpoint:** `/:shortCode`
+- **Example:** `http://localhost:3000/abc123`
+- **Response:** Redirects to the original URL.
+
+### **3️⃣ Generate QR Code**
+- **Method:** `GET`
+- **Endpoint:** `/qr/:shortCode`
+- **Example:** `http://localhost:3000/qr/abc123`
+- **Response:**
+```json
+{
+"qr_code_url": "https://api.qrserver.com/v1/create-qr-code/?data=https://www.google.com&size=150x150"
+}
 ```
 
 ---
 
-## 📖 **Rotas da API**
-### **1️⃣ Encurtar uma URL**
-- **Método:** `POST`
-- **Endpoint:** `/shortUrl`
-- **Body:**
-  ```json
-  {
-    "url": "https://www.google.com"
-  }
-  ```
-- **Resposta:**
-  ```json
-  {
-    "short_url": "http://localhost:3000/abc123"
-  }
-  ```
-
-### **2️⃣ Redirecionar para a URL original**
-- **Método:** `GET`
-- **Endpoint:** `/:shortCode`
-- **Exemplo:** `http://localhost:3000/abc123`
-- **Resposta:** Redireciona para a URL original.
-
-### **3️⃣ Gerar QR Code**
-- **Método:** `GET`
-- **Endpoint:** `/qr/:shortCode`
-- **Exemplo:** `http://localhost:3000/qr/abc123`
-- **Resposta:**
-  ```json
-  {
-    "qr_code_url": "https://api.qrserver.com/v1/create-qr-code/?data=https://www.google.com&size=150x150"
-  }
-  ```
+## 🤝 **Contribution**
+Feel free to open issues and pull requests for improvements!
 
 ---
 
-## 🤝 **Contribuição**
-Sinta-se à vontade para abrir issues e pull requests para melhorias!
-
----
-
-## 👨‍💻 **Desenvolvido por**
+## 👨‍💻 **Developed by**
 💡 **MChiodi**  
 🔗 [Portfólio](https://matheuschiodi.github.io/Portfolio/)  
 
