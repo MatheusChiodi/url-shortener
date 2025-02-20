@@ -89,11 +89,6 @@ npm run dev
 
 ---
 
-## 🔥 **Demonstração**
-![Encurtador de URL](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/seu-usuario/url-shortener)
-
----
-
 ## 📖 **Rotas da API**
 ### **1️⃣ Encurtar uma URL**
 - **Método:** `POST`
